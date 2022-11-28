@@ -1,0 +1,136 @@
+
+  .btn-golden_top {
+    width: auto;
+    display: inline-block;
+    outline: none;
+    font-family: inherit;
+    font-size: 2.5em;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 2.5em;
+    line-height: 2.5em;
+    text-transform: uppercase;
+    padding: 0 1em;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.43),
+    inset 0 -2px 5px 1px #b17d10,
+    inset 0 -1px 1px 3px rgba(250,227,133,1);
+    background-image: linear-gradient(160deg, #a54e07, #b47e11, #fef1a2, #bc881b, #a54e07);
+    border: 1px solid rgba(165,93,7,.6);
+    color: rgba(120,50,5,.8);
+    text-shadow: 0 2px 2px rgba(250, 227, 133, 1);
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    background-size: 100% 100%;
+    background-position:center;
+  }
+  .btn-golden_top:focus,
+  .btn-golden_top:hover {
+    background-size: 150% 150%;
+    transform: scale(1);
+    transition: 1s;
+  }
+  .btn-golden_top:active {
+    box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(110,80,20,.4),
+    inset 0 -2px 5px 1px #b17d10,
+    inset 0 -1px 1px 3px rgba(250,227,133,1);
+    transform: scale(0.9);
+    transition-duration: 0.5s;
+  }
+
+  .text-animate-gold {
+    position: relative;
+    background: linear-gradient(90deg, rgba(207,172,72) 0%, rgba(243,220,118) 20%, rgba(207,172,72) 39%, rgba(254,247,182) 50%, rgba(207,172,72) 60%, rgba(243,220,118) 80%, rgba(207,172,72) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;	
+    animation: shine 3s infinite;
+    background-size: 115%; 
+    background-position: left;
+  }
+
+  .btn-gold{
+    background-color: #DBBE6F;
+  }
+  .btn-gold:hover{
+    background-color: #DBBE6F!important;
+  }
+  .text-gold{
+    color: #DBBE6F;
+  }
+
+  .text-dark-gold{
+    color: rgba(120,50,5,.8);
+  }
+
+  .text-gold:hover{
+    color: #DBBE6F;
+  }
+
+  .btn-check:checked+.btn{
+    background-color: #DBBE6F!important;
+
+  }
+  .btn-outline-gold {
+    background-color: #fafafa;
+    width: 100%;
+    border: none!important;
+  }
+
+  .btn-outline-gold:hover {
+    background-color: #DBBE6F;
+  }
+
+  .btn-outline-gold:focus
+  .btn-outline-gold:active {
+    background-color: #DBBE6F;
+  }
+
+  .quiz-page {
+    display: none;
+  }
+  
+  .quiz-page.active {
+    display: block;
+  }
+
+  .progress-bar {
+    height: 20px;
+    border-radius: 25px;
+    background-color: #DBBE6F;
+    transition: width 0.5s ease-in-out;
+  }
+
+  .timeforchange{
+    background-image: url(./media/corso5dark.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 20%;
+    padding-bottom: 20%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .dnadelleader{
+    background-image: url(./media/corso1dark.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 20%;
+    padding-bottom: 20%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .success-percent{
+    font-size: 70px;
+  }
+
+  @media (min-width: 768px) {
+    
+    .success-percent{
+      font-size: 150px;
+    }
+
+  }

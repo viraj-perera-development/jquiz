@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+
+  <title>JQuiz</title>
+  
+</head>
+
+<body>
+  <!-- version update 21-10-2022 -->
+  
+  <!-- NEEDED TO IMPORT THIS PLUGIN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous"></link>
+  <link rel="stylesheet" href="./jquiz.css"></link>
+  <!-- NEEDED TO IMPORT THIS PLUGIN -->
+  
+  <div class="container-fluid" style="margin-top: 10%; margin-bottom: 10%;">
+    <div class="row d-flex justify-content-center align-items-center">
+
+  <!-- start page -->
+  <div class="col-xxl-4 col-xl-6 col-md-11 col-11 text-center bg-secondary bg-opacity-10 rounded-5 d-block py-5" id="startPage">
+    <p class="text-center display-1 fw-bold text-gold pb-4">Gregario o Leader?</p>
+    <img src="./media/beaboss.jpg" class="img-fluid w-75 rounded-5" alt="immagine quiz">
+    <p class="text-center text-gold fs-1 fw-bold my-4">Sfidati a conoscere a che punto sei del tuo percorso formativo</p>
+    <button id="startGame" class="btn-golden_top start-game">Inizia il quiz</button>
+  </div>
+  <!-- start page -->
+
+      
+<div class="col-xxl-4 col-xl-6 col-md-11 col-11 text-center bg-secondary bg-opacity-10 rounded-5 d-none" id="firstPage">
+              
+  <!-- risultati test -->
+  <div class="quiz-results d-none">
+    <div class="results-container text-center">
+      <div class="corso1 d-none">
+        <p class="text-center text-gold display-1 fw-bolder pt-5 pb-3">DNA DEL LEADER</p>
+        <div class="dnadelleader rounded-5">
+          <p class="success-percent text-gold fw-bold"></p>
+       </div>
+       <p class="text-center text-dark-gold fs-1 fw-semibold py-4">Hai bisogno di approfondire tecniche di comunicazione e di conoscere i nostri 15 comandamenti che faranno di te un grande leader. Il tuo corso è DNA del Leader.</p>
+      </div>
+      <div class="corso5 d-none">
+        <p class="text-center text-gold display-1 fw-bolder pt-5 pb-3">TIME4CHANGE</p>
+        <div class="timeforchange rounded-5">
+           <p class="success-percent text-gold fw-bold"></p>
+        </div>
+        <p class="text-center text-dark-gold fs-1 fw-semibold pt-4">Sembra che tu sia troppo concentrato su te stesso e non riesca a valorizzare il tuo team, prova a metterti in ascolto. Il corso TIME4CHANGE è perfetto per metterti in gioco!</p>
+      </div>
+      <div class="row d-flex justify-content-center align-items-center mb-4">
+          <button class="btn-golden_top restart-btn m-2" type="reset"><i class="fa-solid fa-repeat me-2"></i>restart</button>
+          <button href="" class="btn-golden_top m-2">Info sul corso</button>
+      </div>
+    </div>
+  </div>
+  <!-- risultati test -->
+
+<div class="px-md-5 quiz-container">
+<div class="container-controller">
+                  
+
+  <div class="container py-4 py-md-5">
+    <div class="row d-flex flex-wrap justify-content-center align-items-center">
+      <div class="col-md-11 col-10 bg-light rounded-pill p-0">
+  <!-- progress bar -->
+  <div class="progress-bar"></div>
+  <!-- progress bar -->
+      </div>
+    </div>
+  </div>
+
+
+  <!-- quiz page -->
+  <div class="container-fluid quiz-page active" data-page="1">
+    <div class="row d-flex justify-content-center align-items-center quiz-content">
+
+    <div class="col-12 text-center">
+      <img src="./media/disaccordo.jpg" class="img-fluid rounded-2" alt="immagine quiz">
+      <p class="fw-bold display-5 mt-4 text-gold">Un tuo collega è in disaccordo con una tua proposta, che fai?</p>
+    </div>
+    
+    <div class="text-center clickCheck my-2">
+      <input class="btn-check" type="radio"  name="firstQuestion" id="check01" data-item="1" value="1" />
+      <label  class="btn btn-outline-gold text-dark fs-1 rounded-pill" for="check01">
+        Evito discussioni e faccio come vuole lui
+      </label>
+    </div>                    
+    <div class="text-center clickCheck my-2">
+      <input class="btn-check" type="radio"  name="firstQuestion" id="check02" data-item="1" value="2" />
+      <label  class="btn btn-outline-gold text-dark fs-1 rounded-pill" for="check02">
+        Lo ignoro, le mie idee sono state <br> sempre migliori delle sue.
+      </label>
+    </div>                     
+    <div class="text-center clickCheck my-2 mb-4">
+      <input class="btn-check" type="radio"  name="firstQuestion" id="check03" data-item="1" value="3" />
+      <label  class="btn btn-outline-gold text-dark fs-1 rounded-pill" for="check03">
+        Mi faccio spiegare bene la sua idea e poi valuto.
+      </label>
+    </div>
+    </div>
+  </div>
+  <!-- quiz page -->
+
+  <!-- quiz page -->
+  <div class="container quiz-page" data-page="2">
+    <div class="row d-flex justify-content-center align-items-center quiz-content">
+      <div class="col-12 text-center">
+        <img src="./media/temuto.jpg" class="img-fluid rounded-2" alt="immagine quiz">
+        <p class="fw-bold display-5 mt-4 text-gold">Un vero leader deve essere temuto, sei d'accordo?</p>
+      </div>
+      <div class="text-center clickCheck my-2">
+        <input class="btn-check" type="radio"  name="secondQuestion"  id="check05" data-item="2" value="1" />
+        <label  class="btn btn-outline-gold text-dark fs-1 rounded-pill" for="check05">
+          Per niente
+        </label>
+      </div>
+      <div class="text-center clickCheck my-2">
+        <input class="btn-check" type="radio"  name="secondQuestion"  id="check06" data-item="2" value="2" />
+        <label  class="btn btn-outline-gold text-dark fs-1 rounded-pill" for="check06">
+          Poco
+        </label>
+      </div>
+      <div class="text-center clickCheck my-2 mb-4">
+        <input class="btn-check" type="radio"  name="secondQuestion"  id="check07" data-item="2" value="3" />
+        <label  class="btn btn-outline-gold text-dark fs-1 rounded-pill" for="check07">
+          Molto
+        </label>
+      </div>
+    </div>
+  </div>
+  <!-- quiz page -->
+
+  <!-- quiz page -->
+  <div class="container quiz-page" data-page="3">
+    <div class="row d-flex justify-content-center align-items-center quiz-content">
+      <div class="col-12 text-center">
+        <img src="./media/conoscienza.jpg" class="img-fluid rounded-2" alt="immagine quiz">
+        <p class="fw-bold display-5 mt-4 text-gold">Trasmetti le tue conoscenze ai tuoi colleghi?</p>
+      </div>
+      <div class="text-center clickCheck my-2">
+        <input class="btn-check" type="radio" name="thirdQuestion" id="check09" data-item="3" value="1" />
+        <label  class="btn btn-outline-gold text-dark fs-1 rounded-pill" for="check09">
+          Non tutto. Conviene mantenere qualcosa per se.
+        </label>
+      </div>
+      <div class="text-center clickCheck my-2">
+        <input class="btn-check" type="radio" name="thirdQuestion" id="check10" data-item="3" value="2" />
+        <label  class="btn btn-outline-gold text-dark fs-1 rounded-pill" for="check10">
+          Metto tutte le conoscenze a disposizione.
+        </label>
+      </div>
+      <div class="text-center clickCheck my-2 mb-4">
+        <input class="btn-check" type="radio" name="thirdQuestion" id="check11" data-item="3" value="3" />
+        <label  class="btn btn-outline-gold text-dark fs-1 rounded-pill" for="check11">
+          Non ritengo sia mio compito fornire insegnamenti ai miei parigrado.
+        </label>
+      </div>
+    </div>
+  </div>
+  <!-- quiz page -->
+
+  <!-- quiz page -->
+  <div class="container quiz-page" data-page="4">
+    <div class="row d-flex justify-content-center align-items-center quiz-content">
+      <div class="col-12 text-center">
+        <img src="./media/errori.jpg" class="img-fluid rounded-2" alt="immagine quiz">
+        <p class="fw-bold display-5 mt-4 text-gold">Sei il leader di un team, come affronti gli errori del tuo team?</p>
+      </div>
+      <div class="text-center clickCheck my-2">
+        <input class="btn-check" type="radio" name="fourthQuestion" id="check13" data-item="4" value="1" />
+        <label  class="btn btn-outline-gold text-dark fs-1 rounded-pill" for="check13">
+          Analizzo le colpe e cerco i responsabili
+        </label>
+      </div>
+      <div class="text-center clickCheck my-2">
+        <input class="btn-check" type="radio" name="fourthQuestion" id="check14" data-item="4" value="2" />
+        <label  class="btn btn-outline-gold text-dark fs-1 rounded-pill" for="check14">
+            Attribuisco la responsabilità all'intero gruppo salvaguardando i colpevoli
+          </label>
+        </div>
+        <div class="text-center clickCheck my-2 mb-4">
+          <input class="btn-check" type="radio" name="fourthQuestion" id="check15" data-item="4" value="3" />
+          <label  class="btn btn-outline-gold text-dark fs-1 rounded-pill" for="check15">
+              Mi assumo la responsabilità degli errori del gruppo
+            </label>
+          </div>
+        </div>
+  </div>
+  <!-- quiz page -->
+  
+  <!-- quiz last page -->
+  <div id="lastPage" class="container quiz-page" data-page="5">
+    <div class="row d-flex justify-content-center align-items-center quiz-content">
+      <div class="col-12 text-center">
+        <img src="./media/decisioni.jpg" class="img-fluid rounded-2" alt="immagine quiz">
+        <p class="fw-bold display-5 mt-4 text-gold">I membri del tuo team capiscono e apprezzano le decisioni prese?</p>
+      </div>
+      <div class="text-center clickCheck my-2">
+        <input class="btn-check" type="radio" name="fifthQuestion"  id="check16" data-item="5" value="1" />
+        <label  class="btn btn-outline-gold text-dark fs-1 rounded-pill" for="check16">
+          Molto spesso
+        </label>
+      </div>
+      <div class="text-center clickCheck my-2">
+        <input class="btn-check" type="radio" name="fifthQuestion"  id="check17" data-item="5" value="2" />
+        <label  class="btn btn-outline-gold text-dark fs-1 rounded-pill" for="check17">
+          Spesso
+        </label>
+      </div>
+      <div class="text-center clickCheck my-2">
+        <input class="btn-check" type="radio" name="fifthQuestion"  id="check18" data-item="5" value="3" />
+        <label  class="btn btn-outline-gold text-dark fs-1 rounded-pill" for="check18">
+          Qualche volta
+        </label>
+      </div>
+      <div class="text-center clickCheck my-2">
+        <input class="btn-check" type="radio" name="fifthQuestion"  id="check19" data-item="5" value="4" />
+        <label  class="btn btn-outline-gold text-dark fs-1 rounded-pill" for="check19">
+          Raramente
+        </label>
+      </div>
+      <div class="text-center clickCheck my-2 mb-4">
+        <input class="btn-check" type="radio" name="fifthQuestion"  id="check20" data-item="5" value="5" />
+        <label  class="btn btn-outline-gold text-dark fs-1 rounded-pill" for="check20">
+          Mai
+        </label>
+      </div>
+    </div>
+  </div>
+  <!-- quiz last page -->
+
+  <!-- next button -->
+  <button class="next-btn btn-golden_top mb-4" disabled>Next</button>
+  <!-- next button -->
+  
+  <!-- submit button -->
+  <div class="row d-flex justify-content-center align-items-center">
+    <button class="submit-btn btn-golden_top d-none w-auto mb-4" disabled>Submit</button>
+  </div>
+  <!-- submit button -->
+                  
+</div>
+</div>
+</div>
+</div>
+</div>
+
+        
+        
+        
+        
+        <!-- external javascript -->
+        <script src="https://kit.fontawesome.com/63b50458a9.js" crossriogin="anonymous"></script>
+        <!-- external javascript -->
+        
+        <!-- NEEDED TO IMPORT THIS PLUGIN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="./jquiz.js"></script>
+        <!-- NEEDED TO IMPORT THIS PLUGIN -->
+
+      </body>
+      </html>
